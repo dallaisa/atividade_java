@@ -15,10 +15,30 @@ Este projeto foi desenvolvido em Java com o objetivo de simular uma aplicação 
 
 ---
 
-##  Funcionalidades
+##  Funcionalidades do Projeto
 
-- Cálculo do custo total de aluguel com base no número de dias
-- Aplicação automática de 10% de desconto para aluguéis de 7 dias ou mais
-- Cálculo de multa por devolução atrasada
-- Testes unitários cobrindo diversos cenários, incluindo casos extremos
+- **Cadastro de veículo com modelo e valor da diária**
+- **Cálculo do custo total de aluguel**
+  - Baseado na quantidade de dias solicitada.
+- **Desconto de 10%**
+  - Aplicado automaticamente em aluguéis com **7 dias ou mais**.
+- **Cálculo de multa por devolução atrasada**
+  - Valor adicional por cada dia de atraso.
+- **Validação de entradas**
+  - Tratamento para valores inválidos como diárias negativas ou dias iguais a zero.
 
+---
+
+## Testes Automatizados
+
+O projeto conta com testes unitários usando **JUnit 5** que cobrem:
+
+- Cálculo correto do custo total de aluguel.
+- Aplicação do desconto em aluguéis longos.
+- Cálculo de multa por atraso.
+- Cenários extremos:
+  - Aluguel por 0 dias
+  - Valores negativos de diária
+  - Aluguel de muitos dias (stress test)
+
+Os testes estão na classe `VeiculoTest.java`.
